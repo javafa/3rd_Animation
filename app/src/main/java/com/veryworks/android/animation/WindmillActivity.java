@@ -1,5 +1,6 @@
 package com.veryworks.android.animation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -33,6 +34,7 @@ public class WindmillActivity extends AppCompatActivity implements View.OnClickL
         button4 = (Button) findViewById(R.id.button4);
 
         button.setOnClickListener(this);
+        windmill.setOnClickListener(this);
     }
 
     @Override
@@ -53,6 +55,9 @@ public class WindmillActivity extends AppCompatActivity implements View.OnClickL
 
                 windmill.startAnimation(rotate);
                 break;
+            case R.id.windmill:
+                Intent intent = new Intent(this, AniActivity.class);
+                startActivity(intent);
         }
     }
 }
